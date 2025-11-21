@@ -1,0 +1,39 @@
+{
+  "users": [],
+  "techs": [
+    {
+      "id": "tech_1",
+      "name": "Ravi Kumar",
+      "services": [
+        "EV",
+        "Charger Installation"
+      ],
+      "pins": [
+        "110001",
+        "110002"
+      ],
+      "rating": 4.8,
+      "priceFrom": 500,
+      "gallery": [],
+      "verified": true
+    },
+    {
+      "id": "tech_2",
+      "name": "Shreya Repairs",
+      "services": [
+        "AC",
+        "Fridge"
+      ],
+      "pins": [
+        "400001"
+      ],
+      "rating": 4.5,
+      "priceFrom": 700,
+      "gallery": [],
+      "verified": false
+    }
+  ],
+  "jobs": [],
+  "bids": [],
+  "chats": []
+}
