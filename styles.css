@@ -1,0 +1,57 @@
+/* FutriFix - premium responsive CSS (rainbow gradient theme) */
+:root{
+  --bg:#0f1724;--fg:#0b0f14;--card:#ffffff;--muted:#666;
+  --accent1:linear-gradient(135deg,#7b2ff7 0%,#ff6480 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Segoe UI,Roboto,system-ui,Arial;}
+body.light{background:linear-gradient(180deg,#f7fbff,#ffffff);color:#0b1220;}
+body.dark{background:#071024;color:#e6f0ff;}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:transparent;position:sticky;top:0;z-index:20;}
+.brand{display:flex;gap:12px;align-items:center;}
+.logo{font-weight:800;font-size:20px;background:var(--accent1);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.main-nav a{margin:0 8px;text-decoration:none;color:inherit;opacity:.9;}
+.header-actions{display:flex;gap:8px;align-items:center;}
+.btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;background:#eee;}
+.btn.primary{background:linear-gradient(90deg,#7b2ff7,#ff6480);color:white;box-shadow:0 6px 20px rgba(123,47,247,.15);}
+.btn.outline{background:transparent;border:1px solid rgba(0,0,0,.08);}
+.wallet-badge{background:linear-gradient(90deg,#ffb86b,#ff6480);padding:6px 10px;border-radius:20px;color:white;font-weight:700;}
+main{padding:20px;max-width:1200px;margin:0 auto;}
+.hero{display:flex;gap:20px;align-items:center;justify-content:space-between;margin-bottom:22px;}
+.hero-content{max-width:560px;}
+.hero-visual img{width:280px;height:200px;object-fit:cover;border-radius:18px;box-shadow:0 10px 30px rgba(2,6,23,.08);}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px;}
+.card{background:rgba(255,255,255,.95);padding:16px;border-radius:12px;box-shadow:0 4px 20px rgba(2,6,23,.06);}
+.hidden{display:none;}
+.small{max-width:600px;}
+.small.hidden{display:none;}
+.page{margin-top:18px;}
+.form-row{display:flex;gap:8px;align-items:center;margin-top:8px;}
+.wallet-card{display:flex;justify-content:space-between;align-items:center;}
+.big{font-size:28px;font-weight:800;}
+.plans{display:flex;gap:12px;margin-top:12px;}
+.plan{flex:1;text-align:center;padding:16px;}
+.plan.premium{background:linear-gradient(180deg,#fff,#fff);border:1px solid rgba(0,0,0,.06);}
+.tech-grid{display:flex;gap:12px;}
+.tech-list{width:360px;}
+.tech-list input{width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-bottom:8px;}
+#techs{list-style:none;padding:0;max-height:480px;overflow:auto;}
+#techs li{padding:10px;border-bottom:1px solid #f0f0f0;display:flex;justify-content:space-between;align-items:center;}
+.map{flex:1;min-height:480px;}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,.4);}
+.modal .modal-content{width:760px;max-width:96%;}
+.close{float:right;background:transparent;border:0;font-size:18px;}
+.site-footer{padding:18px;text-align:center;margin-top:30px;color:var(--muted);}
+.mobile-nav{display:none;position:fixed;bottom:10px;left:50%;transform:translateX(-50%);background:#fff;padding:8px 12px;border-radius:30px;box-shadow:0 6px 20px rgba(0,0,0,.08);gap:12px;}
+.mobile-nav a{margin:0 8px;text-decoration:none;color:#222;}
+.lens{position:relative;overflow:hidden;border-radius:16px;}
+.lens img{transition:transform .6s ease;display:block;}
+.lens:hover img{transform:scale(1.06) rotate(-1deg);filter:brightness(.98);}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{flex-direction:column;align-items:flex-start;}
+  .features{grid-template-columns:1fr;}
+  .tech-grid{flex-direction:column;}
+  .main-nav{display:none;}
+  .mobile-nav{display:flex;}
+}

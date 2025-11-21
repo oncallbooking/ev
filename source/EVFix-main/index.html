@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>FutriFix — Find Technicians Near You</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">FutriFix</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="signup-tech.html">Become a Tech</a>
+        <a href="client-post.html">Post a Job</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Find trusted technicians near you</h1>
+        <p class="muted">Search by service and location. See technician rates, experience and bids from local technicians.</p>
+        <div class="search-row">
+          <input id="serviceInput" placeholder="What service do you need? e.g. AC Repair" />
+          <input id="locationInput" placeholder="Enter PIN code or city" />
+          <button id="searchBtn" class="btn-primary">Search</button>
+        </div>
+        <div id="searchMsg" class="muted" style="margin-top:10px"></div>
+      </div>
+
+      <div class="hero-right">
+        <!-- hero image — using your uploaded screenshot path as preview (move to images/ for deployment) -->
+        <img src="/mnt/data/Screenshot 2025-11-21 at 5.59.28 AM.png" alt="preview" style="width:100%;border-radius:10px;filter:contrast(0.95)"/>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>Popular Services</h2>
+      <div class="cat-grid">
+        <button class="cat" data-service="EV Repair">🔌 EV Repair</button>
+        <button class="cat" data-service="Solar Service">🔆 Solar Service</button>
+        <button class="cat" data-service="AC Repair">❄️ AC Repair</button>
+        <button class="cat" data-service="Washing Machine">🧺 Washing Machine</button>
+        <button class="cat" data-service="Geyser Repair">🔥 Geyser Repair</button>
+        <button class="cat" data-service="CCTV">📡 CCTV Installation</button>
+        <button class="cat" data-service="E-bike Service">🛵 E-bike Service</button>
+        <button class="cat" data-service="Appliance Installation">⚒️ Appliance Installation</button>
+      </div>
+    </section>
+
+    <section class="results">
+      <h2>Technicians & Bids</h2>
+      <div class="layout-split">
+        <div style="flex:1;min-width:360px;">
+          <div id="techList" class="list"></div>
+        </div>
+        <div style="flex:1;min-width:360px;">
+          <div id="map" style="height:520px;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,0.06)"></div>
+          <div style="margin-top:12px">
+            <h3>Open Jobs (clients)</h3>
+            <div id="jobFeed"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© FutriFix 2025 — Built for India · Prototype</div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Technician Signup — FutriFix</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">FutriFix</div>
+      <nav><a href="index.html">Home</a><a href="client-post.html">Post a Job</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Technician Sign Up</h2>
+      <p class="muted">Create your profile and get listed in your area. Add degrees/certifications so customers can trust you.</p>
+
+      <div class="form-grid">
+        <input id="name" placeholder="Full name" />
+        <input id="phone" placeholder="Phone (for display)" />
+        <input id="city" placeholder="City" />
+        <input id="pin" placeholder="PIN code" />
+        <input id="services" placeholder="Services (comma separated) e.g. AC Repair, EV Repair" />
+        <input id="degree" placeholder="Degree / Certification (example: ITI Electrical)" />
+        <input id="experience" placeholder="Years of experience" type="number" min="0" />
+        <input id="price" placeholder="Starting price (₹)" />
+        <input id="photo" placeholder="Photo URL (or leave blank)" />
+        <textarea id="bio" placeholder="Short bio / specialties"></textarea>
+      </div>
+
+      <div style="display:flex;gap:12px;margin-top:12px">
+        <button id="signupBtn" class="btn-primary">Register & Publish</button>
+        <button id="signupLocal" class="btn-alt">Register Locally (no server)</button>
+      </div>
+
+      <div id="signupMsg" class="muted" style="margin-top:12px"></div>
+      <p style="margin-top:18px;font-size:13px" class="muted">We attempt to geocode your city/PIN using free Nominatim to place you on the map. For production, integrate Google Maps Geocoding or a paid provider.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© FutriFix 2025</div>
+  </footer>
+
+  <script src="js/signup.js"></script>
+</body>
+</html>

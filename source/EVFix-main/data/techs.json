@@ -1,0 +1,5 @@
+[
+  {"id":1,"name":"Rahul Verma","city":"New Delhi","pin":"110001","services":["EV Repair","AC Repair"],"degree":"ITI Electrical","photo":"https://picsum.photos/seed/rahul/300/300","experience":6,"price":"499","bio":"EV & AC specialist. 6 years experience.","lat":28.6139,"lon":77.2090},
+  {"id":2,"name":"Amit Kumar","city":"Mumbai","pin":"400001","services":["Solar Service","Panel Installation"],"degree":"Diploma Electrical","photo":"https://picsum.photos/seed/amit/300/300","experience":8,"price":"699","bio":"Rooftop solar, inverters, commissioning.","lat":19.075983,"lon":72.877655},
+  {"id":3,"name":"Sahil Sharma","city":"Bengaluru","pin":"560001","services":["Washing Machine","Appliance Installation"],"degree":"ITI Mech","photo":"https://picsum.photos/seed/sahil/300/300","experience":4,"price":"299","bio":"Quick fixes and preventive maintenance.","lat":12.971599,"lon":77.594566}
+]

@@ -1,0 +1,36 @@
+// server/server.js
+// Minimal Express server to serve branches & accept simple booking requests.
+// Run: npm init && npm install express cors body-parser
+
+const express = require('express');
+const path = require('path');
+const fs = require('fs').promises;
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(require('cors')());
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '..'))); // serve the frontend static files
+
+const BRANCH_FILE = path.join(__dirname, '..', 'data', 'branches.json');
+
+app.get('/api/branches', async (req, res) => {
+  try {
+    const txt = await fs.readFile(BRANCH_FILE, 'utf8');
+    const branches = JSON.parse(txt);
+    res.json(branches);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json([]);
+  }
+});
+
+// simple booking endpoint
+app.post('/api/book', async (req, res) => {
+  // payload: { branchId, name, phone, serviceType }
+  console.log('Booking:', req.body);
+  // in prod: validate, persist to DB, send SMS/email, return booking id
+  res.json({ ok: true, jobId: 'JOB' + Date.now() });
+});
+
+app.listen(port, () => console.log(`Server running on http://localhost:${port}`));

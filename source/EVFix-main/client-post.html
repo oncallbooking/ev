@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Post a Job — FutriFix</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">FutriFix</div>
+      <nav><a href="index.html">Home</a><a href="signup-tech.html">Become a Tech</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Post a Job — Get bids from local technicians</h2>
+      <div class="form-grid">
+        <input id="title" placeholder="Job title e.g. AC compressor repair" />
+        <textarea id="desc" placeholder="Describe the problem, location, and photos (links)"></textarea>
+        <input id="city" placeholder="City" />
+        <input id="pin" placeholder="PIN code" />
+        <input id="budget" placeholder="Your budget (₹) or leave blank" />
+        <input id="contact" placeholder="Your phone or email" />
+      </div>
+      <div style="margin-top:10px">
+        <button id="postJob" class="btn-primary">Post Job</button>
+      </div>
+      <div id="postMsg" class="muted" style="margin-top:10px"></div>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <h3>My posted jobs</h3>
+      <div id="myJobs"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container">© FutriFix 2025</div></footer>
+
+  <script src="js/client-post.js"></script>
+</body>
+</html>

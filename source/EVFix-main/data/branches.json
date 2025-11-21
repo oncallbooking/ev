@@ -1,0 +1,11 @@
+[
+  {"id":1,"name":"FutriFix - Delhi Central","city":"New Delhi","pin":"110001","contact":"011-4000-1000","eta":"24-36 hrs","img":"https://picsum.photos/seed/delhi/600/400","lat":28.6139,"lon":77.2090},
+  {"id":2,"name":"FutriFix - Gurgaon","city":"Gurugram","pin":"122001","contact":"0124-400-200","eta":"24 hrs","img":"https://picsum.photos/seed/gurgaon/600/400","lat":28.4595,"lon":77.0266},
+  {"id":3,"name":"FutriFix - Lucknow","city":"Lucknow","pin":"226001","contact":"0522-400-300","eta":"48 hrs","img":"https://picsum.photos/seed/lucknow/600/400","lat":26.8467,"lon":80.9462},
+  {"id":4,"name":"FutriFix - Chennai North","city":"Chennai","pin":"600001","contact":"044-400-400","eta":"24-48 hrs","img":"https://picsum.photos/seed/chennai/600/400","lat":13.0827,"lon":80.2707},
+  {"id":5,"name":"FutriFix - Bengaluru","city":"Bengaluru","pin":"560001","contact":"080-400-500","eta":"24 hrs","img":"https://picsum.photos/seed/bengaluru/600/400","lat":12.9716,"lon":77.5946},
+  {"id":6,"name":"FutriFix - Pune","city":"Pune","pin":"411001","contact":"020-400-600","eta":"24-36 hrs","img":"https://picsum.photos/seed/pune/600/400","lat":18.5204,"lon":73.8567},
+  {"id":7,"name":"FutriFix - Patna","city":"Patna","pin":"800001","contact":"0612-400-700","eta":"48-72 hrs","img":"https://picsum.photos/seed/patna/600/400","lat":25.5941,"lon":85.1376},
+  {"id":8,"name":"FutriFix - Jaipur","city":"Jaipur","pin":"302001","contact":"0141-400-800","eta":"36 hrs","img":"https://picsum.photos/seed/jaipur/600/400","lat":26.9124,"lon":75.7873},
+  {"id":9,"name":"FutriFix - Kolkata","city":"Kolkata","pin":"700001","contact":"033-400-900","eta":"24-48 hrs","img":"https://picsum.photos/seed/kolkata/600/400","lat":22.5726,"lon":88.3639}
+]

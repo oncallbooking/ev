@@ -1,0 +1,4 @@
+[
+  {"id":1,"title":"AC compressor making noise","desc":"Compressor humming and not cooling well. 1.5 ton split AC. Prefer next-day service.","city":"New Delhi","pin":"110001","budget":"2500","contact":"client@example.com","created":1700000000000,"bids":[]},
+  {"id":2,"title":"Rooftop solar panel cleaning & inspection","desc":"I want cleaning & performance check for 3kW system.","city":"Mumbai","pin":"400001","budget":"1500","contact":"client2@example.com","created":1700001000000,"bids":[]}
+]
