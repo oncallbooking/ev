@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — FutriFix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><div class="logo-mark">FF</div><div><h1>FutriFix</h1><div class="muted">Get in touch</div></div></div>
+      <nav class="desktop">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="branches.html">Branches</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+        <div class="card" style="flex:1;min-width:320px">
+          <h3>Customer Support</h3>
+          <p class="muted">Email: support@futrifix.example | Phone: 1800-123-456</p>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <input id="name" placeholder="Your name" style="flex:1;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit" />
+            <input id="phone" placeholder="Phone" style="width:150px;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit" />
+          </div>
+          <div style="margin-top:8px"><button onclick="alert('Thanks! We will call you')" class="btn">Request Callback</button></div>
+        </div>
+
+        <div class="card" style="flex:1;min-width:320px">
+          <h3>Franchise / Partnership</h3>
+          <p class="muted">Interested in opening a branch? Tell us your city & PIN.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <input id="cityPartner" placeholder="City" style="flex:1;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit" />
+            <input id="pinPartner" placeholder="PIN" style="width:120px;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit" />
+          </div>
+          <div style="margin-top:8px"><button onclick="alert('Thanks, we received your request')" style="background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px;color:var(--muted)">Apply</button></div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>© FutriFix 2025</div>
+        <div class="muted">Back to <a class="link" href="index.html">Home</a></div>
+      </footer>
+    </main>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
