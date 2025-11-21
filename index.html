@@ -56,50 +56,59 @@
     </section>
 
 
-    <!-- DASHBOARD -->
-    <section id="dashboard" class="section glass">
-      <h3>Dashboard — Customer & Technician Flows</h3>
+<!-- DASHBOARD -->
+<section id="dashboard" class="section glass">
+  <h3>Dashboard — Customer & Technician Flows</h3>
 
-      <div class="grid-2">
-        <!-- CUSTOMER POST JOB -->
-        <div class="card">
-          <h4>Post a Job</h4>
-          <input id="custName" placeholder="Your name" />
-          <input id="custPin" placeholder="PIN Code / City" />
-          <select id="custService"></select>
-          <textarea id="custDesc" rows="3" placeholder="Describe the issue..."></textarea>
-          <div class="row">
-            <input id="custMin" placeholder="Min Budget (₹)" />
-            <input id="custMax" placeholder="Max Budget (₹)" />
-          </div>
-          <div class="row">
-            <input type="file" id="custImage" accept="image/*" />
-            <div id="imgPreview"></div>
-          </div>
-          <button id="postJobBtn" class="btn-primary">Post Job (Open to Bids)</button>
-        </div>
-
-        <!-- TECHNICIAN SIGNUP -->
-        <div class="card">
-          <h4>Technician Signup</h4>
-          <input id="techName" placeholder="Full name" />
-          <input id="techSkills" placeholder="Skills (comma separated e.g. EV,Solar)" />
-          <input id="techPin" placeholder="Serviceable PINs (comma separated)" />
-          <input id="techPrice" placeholder="Base price (₹)" />
-          <select id="techSub">
-            <option value="free">Subscription: Free</option>
-            <option value="pro">Pro — ₹999/mo</option>
-            <option value="premium">Premium — ₹4999/yr</option>
-          </select>
-          <button id="createTechBtn" class="btn-secondary">Create Technician Profile</button>
-        </div>
+  <div class="grid-2">
+    <!-- CUSTOMER POST JOB -->
+    <div class="card">
+      <h4>Post a Job</h4>
+      <input id="custName" placeholder="Your name" />
+      <input id="custPin" placeholder="PIN Code / City" />
+      <select id="custService"></select>
+      <textarea id="custDesc" rows="3" placeholder="Describe the issue..."></textarea>
+      <div class="row">
+        <input id="custMin" placeholder="Min Budget (₹)" />
+        <input id="custMax" placeholder="Max Budget (₹)" />
+      </div>
+      <div class="row">
+        <input type="file" id="custImage" accept="image/*" />
+        <div id="imgPreview"></div>
       </div>
 
-      <div style="margin-top:24px;">
-        <h4>Job Feed (Open)</h4>
-        <div id="jobFeed" class="grid"></div>
+      <div class="row" style="justify-content: space-between;">
+        <button id="postJobBtn" class="btn-primary">Post Job (Open to Bids)</button>
+        <button class="btn-chat">Chat</button>
       </div>
-    </section>
+    </div>
+
+    <!-- TECHNICIAN SIGNUP -->
+    <div class="card">
+      <h4>Technician Signup</h4>
+      <input id="techName" placeholder="Full name" />
+      <input id="techSkills" placeholder="Skills (comma separated e.g. EV,Solar)" />
+      <input id="techPin" placeholder="Serviceable PINs (comma separated)" />
+      <input id="techPrice" placeholder="Base price (₹)" />
+      <select id="techSub">
+        <option value="free">Subscription: Free</option>
+        <option value="pro">Pro — ₹999/mo</option>
+        <option value="premium">Premium — ₹4999/yr</option>
+      </select>
+
+      <div class="row" style="justify-content: space-between;">
+        <button id="createTechBtn" class="btn-secondary">Create Technician Profile</button>
+        <button class="btn-chat">Chat</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;">
+    <h4>Job Feed (Open)</h4>
+    <div id="jobFeed" class="grid"></div>
+  </div>
+</section>
+
     
 
     <!-- SERVICES -->
