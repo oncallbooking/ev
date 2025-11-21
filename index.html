@@ -1,205 +1,81 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FutriFix — Premium Multipage UI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <header class="header">
-      <div class="brand">
-        <div class="logo-mark" aria-hidden>FF</div>
-        <div>
-          <h1>FutriFix</h1>
-          <div class="muted">EV · Solar · Appliance — Pan-India</div>
-        </div>
-      </div>
-
-      <nav class="desktop" id="navDesktop">
-        <a href="index.html" class="active">Home</a>
-        <a href="services.html">Services</a>
-        <a href="branches.html">Branches</a>
-        <a href="contact.html">Contact</a>
-        <button class="btn">Book a Visit</button>
-      </nav>
-
-      <div class="mobile-nav" style="display:none">
-        <button id="mToggle" class="btn">Menu</button>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="hero-card">
-          <div class="kicker">Trusted technicians</div>
-          <h2>Fast, reliable repair & maintenance — designed for all devices</h2>
-          <p class="sub">Premium multipage webapp with multibox actions, responsive layout, and reusable components for a production-ready front-end.</p>
-
-          <div class="multibox">
-            <div class="box" onclick="location.href='services.html'">
-              <div class="icon">EV</div>
-              <div><h4>EV Repair</h4><p class="muted">Battery, motor & roadside support</p></div>
-            </div>
-            <div class="box" onclick="location.href='services.html#solar'">
-              <div class="icon">SOL</div>
-              <div><h4>Solar Services</h4><p class="muted">Panel cleaning & inverter care</p></div>
-            </div>
-            <div class="box" onclick="location.href='contact.html'">
-              <div class="icon">AP</div>
-              <div><h4>Appliance Care</h4><p class="muted">Fridge, AC & washing machines</p></div>
-            </div>
-          </div>
-
-          <div style="margin-top:14px" class="search-row">
-            <input id="searchInput" placeholder="Enter PIN code or city (e.g., 110001)" />
-            <button id="searchBtn">Find</button>
-          </div>
-        </div>
-
-        <aside class="hero-card hero-right">
-          <div class="kicker">Why FutriFix?</div>
-          <h3 style="margin-top:6px">Local techs • Genuine parts • 90-day warranty</h3>
-          <p class="muted">Transparent pricing and scheduled visits for homes & fleets.</p>
-
-          <div class="stats" style="margin-top:12px">
-            <div class="badge center">
-              <div style="font-weight:800">24–48h</div>
-              <div class="muted">Response</div>
-            </div>
-            <div class="badge center">
-              <div style="font-weight:800">120+</div>
-              <div class="muted">Towns</div>
-            </div>
-            <div class="badge center">
-              <div style="font-weight:800">5k+</div>
-              <div class="muted">Serviced</div>
-            </div>
-          </div>
-
-          <div style="margin-top:12px">
-            <button class="btn" style="width:100%" onclick="location.href='contact.html'">Book a Service</button>
-          </div>
-        </aside>
-      </section>
-
-      <section style="margin-top:20px">
-        <h3>Popular services</h3>
-        <div class="services-grid">
-          <div class="card"><img src="https://picsum.photos/seed/ev1/900/600" alt=""><h4>EV Diagnostics</h4><p class="muted">Battery health, telematics & repairs</p></div>
-          <div class="card"><img src="https://picsum.photos/seed/sol1/900/600" alt=""><h4>Solar Care</h4><p class="muted">Cleaning, inverter & monitoring</p></div>
-          <div class="card"><img src="https://picsum.photos/seed/app1/900/600" alt=""><h4>Home Appliances</h4><p class="muted">Fridge, AC, washing machine</p></div>
-        </div>
-      </section>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FutriFix Dashboard</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FutriFix — EV·Solar·Appliance Repair Marketplace</title>
+  <link rel="stylesheet" href="app.css"/>
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="title">FutriFix — Unified Dashboard</h1>
 
-        <!-- Search -->
-        <div class="search-box">
-            <input id="serviceInput" placeholder="Search service (EV, AC, Solar...)"/>
-            <input id="areaInput" placeholder="PIN / City"/>
-        </div>
+<header class="navbar">
+  <div class="logo">⚡ FutriFix</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="btn-primary">Book Service</button>
+</header>
 
-        <!-- Signup Forms -->
-        <div class="two-col">
-            
-            <!-- CUSTOMER SIGNUP -->
-            <div class="box">
-                <h2>Customer Signup</h2>
-                <img src="https://via.placeholder.com/50" class="avatar"/>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Instant Repair & Maintenance Across India ⚡</h1>
+    <p>EV · Solar · Home Appliances — Certified Techs Near You</p>
+    <div class="search-box">
+      <input id="searchInput" placeholder="Enter PIN Code or City...">
+      <button id="searchBtn">Find</button>
+    </div>
+    <p id="searchResult" class="search-result">Search a location to check availability</p>
+  </div>
+  <img src="https://picsum.photos/seed/evrepair/700/500" class="hero-img">
+</section>
 
-                <input placeholder="Full Name"/>
-                <input placeholder="PIN Code / City"/>
+<section id="services" class="section">
+  <h2>Top Services</h2>
+  <div class="card-grid" id="serviceCards"></div>
+</section>
 
-                <select>
-                    <option>Job Type (EV Repair, AC Service, Solar Install...)</option>
-                    <option>EV Repair</option>
-                    <option>Battery Swap</option>
-                    <option>AC Repair</option>
-                    <option>Solar Panel Service</option>
-                    <option>General Appliance Repair</option>
-                </select>
+<section id="branches" class="section">
+  <h2>Nearby Branches</h2>
+  <div class="card-grid" id="branchList"></div>
+</section>
 
-                <textarea placeholder="Describe your issue"></textarea>
+<section id="dashboard" class="section glass">
+  <h2>FutriFix Dashboard</h2>
 
-                <div class="row">
-                    <input placeholder="Min Bid Price"/>
-                    <input placeholder="Max Bid Price"/>
-                </div>
+  <div class="grid-2">
 
-                <input type="date" />
-                <input type="time" />
-
-                <button class="btn">Create Account</button>
-            </div>
-
-            <!-- TECH SIGNUP -->
-            <div class="box">
-                <h2>Technician Signup</h2>
-                <img src="https://via.placeholder.com/50" class="avatar"/>
-
-                <input placeholder="Full Name"/>
-                <input placeholder="Skills (EV, AC, Solar...)"/>
-                <input placeholder="Experience (years)"/>
-                <input placeholder="Base Price"/>
-                <input placeholder="Certification ID / License No."/>
-
-                <select>
-                    <option>Technician Status</option>
-                    <option>Certified Technician</option>
-                    <option>Government Verified</option>
-                    <option>Premium Subscription Holder</option>
-                </select>
-
-                <button class="btn">Create Technician Profile</button>
-            </div>
-        </div>
-
-        <!-- MAIN PANELS -->
-        <div class="two-col">
-
-            <!-- TECHNICIAN LIST -->
-            <div class="box">
-                <h2>Available Technicians</h2>
-                <div id="techList"></div>
-            </div>
-
-            <!-- JOB LIST -->
-            <div class="box">
-                <h2>Available Jobs</h2>
-                <div id="jobList"></div>
-            </div>
-
-        </div>
+    <div class="box">
+      <h3>Customer Job Request</h3>
+      <input placeholder="Full Name">
+      <input placeholder="City / PIN">
+      <select id="jobService"></select>
+      <textarea placeholder="Problem Description"></textarea>
+      <button class="btn-primary">Post Job</button>
     </div>
 
-<script src="script.js"></script>
-</body>
-</html>
-   </section>
+    <div class="box">
+      <h3>Technician Profile</h3>
+      <input placeholder="Full Name">
+      <input placeholder="Skills (EV, AC, Solar)">
+      <input placeholder="Experience (Years)">
+      <button class="btn-secondary">Register Technician</button>
+    </div>
 
-
-      
-
-      <footer class="footer">
-        <div>© FutriFix 2025</div>
-        <div class="muted">Built for Indian neighborhoods</div>
-      </footer>
-    </main>
   </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Support</h2>
+  <p>support@futrifix.com | 1800-245-000</p>
+</section>
+
+<footer>
+  © FutriFix 2025 — Powered by Local Technicians
+</footer>
 
 <script src="app.js"></script>
 </body>
