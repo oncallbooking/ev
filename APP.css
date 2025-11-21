@@ -1,0 +1,81 @@
+:root {
+  --dark: #0e1525;
+  --glass: rgba(255,255,255,0.05);
+  --accent: #00e5a8;
+  --text: #dee7ef;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:Inter, sans-serif; }
+body { background:var(--dark); color:var(--text); }
+
+.navbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 32px; background:rgba(0,0,0,0.4); backdrop-filter:blur(10px);
+  position:sticky; top:0; z-index:10;
+}
+.navbar nav a { margin:0 12px; color:var(--text); text-decoration:none; opacity:0.8; }
+.navbar nav a:hover { opacity:1; }
+
+.btn-primary{background:var(--accent);border:none;padding:10px 18px;
+  border-radius:10px;color:#000;font-weight:700;cursor:pointer;}
+.btn-secondary{border:1px solid var(--accent);padding:10px 18px;
+  border-radius:10px;color:var(--accent);cursor:pointer;}
+
+.hero{
+  display:flex;padding:40px;gap:32px;align-items:center;
+}
+.hero-content{flex:1;}
+.hero-img{width:50%;border-radius:20px;}
+.search-box{display:flex;gap:10px;margin:16px 0;}
+.search-box input{flex:1;padding:12px;border-radius:8px;border:1px solid #333;background:#0003;color:var(--text);}
+.search-box button{padding:12px 24px;background:var(--accent);border-radius:8px;border:none;color:#001;}
+
+.section{padding:60px 32px;}
+.section h2{margin-bottom:20px;}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+
+.card{
+  background:var(--glass);
+  border:1px solid #222;
+  border-radius:14px;
+  padding:18px;
+  transition:0.3s;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--accent);}
+
+.card img{
+  width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:8px;
+}
+
+.glass{
+  background:var(--glass);
+  border:1px solid #444;
+  border-radius:20px;
+  padding:40px;
+}
+
+.grid-2{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
+
+.box input, .box textarea, .box select{
+  width:100%;padding:12px;margin:8px 0;
+  background:transparent;border:1px solid #333;border-radius:10px;color:var(--text);
+}
+
+footer{
+  padding:20px;text-align:center;font-size:14px;background:#0b111f;
+  border-top:1px solid #222;margin-top:40px;
+}
+
+/* Responsive */
+@media(max-width:800px){
+  .hero{flex-direction:column;text-align:center;}
+  .hero-img{width:100%;}
+}
