@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Technician Signup — FutriFix</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="header container">
+    <div class="brand"><div class="logo">FF</div><div><h1>FutriFix</h1><p class="muted">Technician Signup</p></div></div>
+    <nav><a href="index.html">Home</a></nav>
+    <div><a href="login.html"><button class="btn">Login</button></a></div>
+  </header>
+
+  <main class="container" style="padding:20px 18px">
+    <div class="form-card">
+      <h2>Create Technician Profile</h2>
+      <form id="techForm">
+        <div class="label">Full name</div>
+        <input class="input-field" name="name" placeholder="e.g. Rohit Sharma" required>
+
+        <div class="label">Phone (WhatsApp number)</div>
+        <input class="input-field" name="phone" placeholder="91XXXXXXXXXX" required>
+
+        <div class="form-row">
+          <div style="flex:1"><div class="label">Primary Skill</div><input class="input-field" name="skill" placeholder="EV, Solar, AC..." required></div>
+          <div style="width:160px"><div class="label">Experience</div><input class="input-field" name="exp" placeholder="e.g. 5 yrs"></div>
+        </div>
+
+        <div class="form-row">
+          <div style="flex:1"><div class="label">Base Price (₹)</div><input class="input-field" name="price" type="number" placeholder="e.g. 199"></div>
+          <div style="width:160px"><div class="label">Rating</div><input class="input-field" name="rating" type="number" step="0.1" placeholder="4.8"></div>
+        </div>
+
+        <div style="margin-top:10px;display:flex;gap:12px;justify-content:flex-end">
+          <a href="index.html"><button type="button" class="btn-ghost btn">Cancel</button></a>
+          <button type="submit" class="btn-primary btn">Create Profile</button>
+        </div>
+      </form>
+      <p class="small muted" style="margin-top:10px">By creating a profile you agree to our terms (demo).</p>
+    </div>
+  </main>
+
+  <script>document.addEventListener('DOMContentLoaded', ()=>{ FUTR.initSignupPages?.(); });</script>
+</body>
+</html>
