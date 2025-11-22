@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Customer Signup — FutriFix</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="header container">
+    <div class="brand"><div class="logo">FF</div><div><h1>FutriFix</h1><p class="muted">Customer Signup</p></div></div>
+    <nav><a href="index.html">Home</a></nav>
+    <div><a href="login.html"><button class="btn">Login</button></a></div>
+  </header>
+
+  <main class="container" style="padding:20px 18px">
+    <div class="form-card">
+      <h2>Create Customer Account</h2>
+      <form id="custForm">
+        <div class="label">Full name</div>
+        <input class="input-field" name="name" placeholder="e.g. Asha R." required>
+
+        <div class="label">Phone (WhatsApp)</div>
+        <input class="input-field" name="phone" placeholder="91XXXXXXXXXX" required>
+
+        <div style="margin-top:12px">
+          <div class="label">Quick Post: Job Title</div>
+          <input class="input-field" name="jobTitle" placeholder="e.g. EV not charging">
+        </div>
+
+        <div class="form-row" style="margin-top:8px">
+          <div style="flex:1"><div class="label">PIN</div><input class="input-field" name="pin" placeholder="560076"></div>
+          <div style="width:160px"><div class="label">Budget range</div><input class="input-field" name="range" placeholder="₹350–500"></div>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:12px;justify-content:flex-end">
+          <a href="index.html"><button type="button" class="btn-ghost btn">Cancel</button></a>
+          <button type="submit" class="btn-primary btn">Create & Post (optional)</button>
+        </div>
+      </form>
+      <p class="small muted" style="margin-top:10px">You can post job directly after creating account (demo).</p>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      FUTR.initSignupPages?.();
+      // Extended handler: if job fields are filled, also post job
+      const form = document.getElementById('custForm');
+      form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        // call existing handler to save user
+        form.submit(); // will be handled by app.js listener (customerSignupHandler)
+      })
+    });
+  </script>
+</body>
+</html>
