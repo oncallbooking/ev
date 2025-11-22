@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login — FutriFix</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="header container">
+    <div class="brand"><div class="logo">FF</div><div><h1>FutriFix</h1><p class="muted">Login</p></div></div>
+    <nav><a href="index.html">Home</a></nav>
+  </header>
+
+  <main class="container" style="padding:20px;">
+    <div class="form-card">
+      <h2>Quick Login (demo)</h2>
+      <form id="loginForm">
+        <div class="label">Phone</div>
+        <input class="input-field" name="phone" placeholder="91XXXXXXXXXX" required>
+        <div class="label" style="margin-top:8px">Role</div>
+        <select class="input-field" name="role">
+          <option value="customer">Customer</option>
+          <option value="technician">Technician</option>
+        </select>
+
+        <div style="margin-top:12px;display:flex;gap:12px;justify-content:flex-end">
+          <a href="index.html"><button type="button" class="btn-ghost btn">Cancel</button></a>
+          <button type="submit" class="btn-primary btn">Login</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const form = document.getElementById('loginForm');
+      form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const phone = form.phone.value.trim();
+        const role = form.role.value;
+        if(!phone){ alert('Enter phone'); return; }
+        // mock sign-in: store current user
+        localStorage.setItem('FUTR_CURRENT', JSON.stringify({phone,role}));
+        alert('Logged in (mock) as ' + role);
+        location.href = 'dashboard.html';
+      })
+    });
+  </script>
+</body>
+</html>
