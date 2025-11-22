@@ -3,216 +3,114 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>FutriFix — Partner Dashboard</title>
-  <meta name="theme-color" content="#071026" />
-  <link rel="stylesheet" href="css/styles.css">
+  <title>FutriFix — Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
 </head>
-<body data-theme="dark">
-  <div class="page">
-    <!-- HEADER -->
-    <header>
-      <div class="brand">
-        <div class="logo">FF</div>
-        <div>
-          <h1 class="site-title">FutriFix</h1>
-          <p class="muted">EV · Solar · Appliances — Pan-India</p>
-        </div>
+<body>
+  <header class="header container">
+    <div class="brand">
+      <div class="logo">FF</div>
+      <div>
+        <h1>FutriFix</h1>
+        <p>EV · Solar · Appliances — Pan-India</p>
       </div>
+    </div>
 
-      <nav aria-label="Main menu" class="nav">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#branches">Branches</a>
-        <a href="#dashboard">Dashboard</a>
-      </nav>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html" onclick="alert('Services: placeholder')">Services</a>
+      <a href="branches.html" onclick="alert('Branches: placeholder')">Branches</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
 
-      <div class="actions">
-        <div class="play-themes" aria-hidden="false" title="Theme play">
-          <button class="theme-btn theme-green" data-theme="green" aria-label="Green theme"></button>
-          <button class="theme-btn theme-orange" data-theme="orange" aria-label="Orange theme"></button>
-          <button class="theme-btn theme-blue" data-theme="blue" aria-label="Blue theme"></button>
-          <button class="theme-btn theme-light" data-theme="light" aria-label="Light theme"></button>
-          <button class="theme-btn theme-dark" data-theme="dark" aria-label="Dark theme"></button>
-        </div>
+    <div>
+      <a href="login.html"><button class="btn">Login</button></a>
+      <a href="customer-signup.html"><button class="btn-primary">Sign up</button></a>
+    </div>
+  </header>
 
-        <button class="btn">Quick Login</button>
-        <button class="btn-primary">Post Job</button>
-      </div>
-    </header>
-
-    <!-- HERO / SEARCH / STATS -->
-    <section id="home" class="hero" aria-label="Hero">
+  <main class="container">
+    <section class="hero" id="home">
       <div class="hero-left">
         <h2>Certified technicians across India — book in minutes.</h2>
-        <p class="muted sub">EV, Solar, AC, Refrigerator, Washing machines — local pros with verified profiles and transparent pricing.</p>
+        <p class="muted">EV, Solar, AC, Refrigerator, Washing machines — verified pros, transparent pricing.</p>
 
-        <div class="search-card" role="search">
+        <div class="search-card">
           <div class="search-row">
-            <input id="searchInput" placeholder="Enter PIN code (110001) or city (Bengaluru)">
-            <select id="serviceSelect" aria-label="Select service">
+            <input id="searchInput" class="input" placeholder="Enter PIN code (110001) or city (Bengaluru)">
+            <select id="serviceSelect" class="input">
               <option value="">Select Service</option>
-              <option>EV</option>
-              <option>Solar</option>
-              <option>AC</option>
-              <option>Refrigerator</option>
-              <option>Washing Machine</option>
+              <option>EV</option><option>Solar</option><option>AC</option><option>Refrigerator</option><option>Washing Machine</option>
             </select>
-            <button id="searchBtn" class="search-go">Find</button>
+            <button id="searchBtn" class="search-cta">Find</button>
           </div>
-          <div id="searchResult" class="muted" style="margin-top:8px">Enter location + service to find technicians & branches near you.</div>
+          <div id="searchResult" class="small muted" style="margin-top:8px">Enter location + service to find technicians & branches near you.</div>
         </div>
 
-        <div class="quick-stats" aria-hidden>
-          <div class="stat">
-            <div class="num">120+</div>
-            <div class="muted">Towns</div>
-          </div>
-          <div class="stat">
-            <div class="num">8k+</div>
-            <div class="muted">Jobs Completed</div>
-          </div>
-          <div class="stat">
-            <div class="num">4.9</div>
-            <div class="muted">Avg Rating</div>
-          </div>
+        <div class="stats">
+          <div class="stat"><div class="num">120+</div><div class="muted">Cities</div></div>
+          <div class="stat"><div class="num">8k+</div><div class="muted">Jobs Done</div></div>
+          <div class="stat"><div class="num">4.9</div><div class="muted">Avg Rating</div></div>
         </div>
       </div>
 
-      <div class="hero-right" aria-hidden>
-        <img alt="FutriFix hero" src="https://picsum.photos/seed/futrifixhero/800/600">
+      <div class="hero-right">
+        <img src="https://picsum.photos/seed/futrifixhero/900/700" alt="FutriFix illustration">
       </div>
     </section>
 
-    <!-- TWO BOXES: Technicians (left) + Job Bids (right) -->
-    <section id="dashboard" style="margin-top:20px">
-      <div class="two-box-wrap" role="region" aria-label="Technicians and job bids">
-        <div class="panel" id="techPanel">
-          <h2>Available Technicians</h2>
-          <p class="muted hint">Closest & verified — click WhatsApp to chat or tap to view profile</p>
-          <div id="techList"></div>
+    <!-- TWO PANELS -->
+    <section style="margin-top:18px">
+      <div class="two-panel-wrap">
+        <div class="panel">
+          <h3>Available Technicians</h3>
+          <p class="muted">Closest & verified — click WhatsApp to chat</p>
+          <div id="techList" style="margin-top:12px"></div>
+          <div class="small center" style="margin-top:8px">
+            <a href="tech-signup.html" class="small">Become a technician</a>
+          </div>
         </div>
 
-        <div class="panel" id="jobsPanel">
-          <h2>Customer Job Bids</h2>
-          <p class="muted hint">Open jobs — technicians bid, customers accept the best offer</p>
-          <div id="jobList"></div>
+        <div class="panel">
+          <h3>Open Job Bids</h3>
+          <p class="muted">Customers post jobs — technicians bid</p>
+          <div id="jobList" style="margin-top:12px"></div>
+          <div class="small center" style="margin-top:8px">
+            <a href="customer-signup.html" class="small">Post a job</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" style="margin-top:28px;">
-      <h3 style="margin-bottom:12px;">Popular Services</h3>
-      <div id="servicesGrid" class="services-grid">
-        <div class="job-card"><b>EV Scooter Repair</b><div class="muted" style="margin-top:6px">Fast pickup & repair</div></div>
-        <div class="job-card"><b>Solar Panel Service</b><div class="muted" style="margin-top:6px">Cleaning & inverter checks</div></div>
-        <div class="job-card"><b>AC Service</b><div class="muted" style="margin-top:6px">Gas top-up & cleaning</div></div>
-        <div class="job-card"><b>Refrigerator Repair</b><div class="muted" style="margin-top:6px">Compressor & gas works</div></div>
+    <!-- Services & Branches quick -->
+    <section style="margin-top:18px">
+      <h3>Popular Services</h3>
+      <div class="grid" style="margin-top:12px">
+        <div class="card-mini">EV Scooter Repair</div>
+        <div class="card-mini">Solar Panel Service</div>
+        <div class="card-mini">AC Service</div>
+        <div class="card-mini">Refrigerator Repair</div>
       </div>
     </section>
 
-    <!-- BRANCHES -->
-    <section id="branches" style="margin-top:28px;">
-      <h3 style="margin-bottom:12px;">Branch Network</h3>
-      <div id="branchList" class="services-grid">
-        <div class="job-card"><b>Bengaluru</b><div class="muted">41 Technicians</div></div>
-        <div class="job-card"><b>Mumbai</b><div class="muted">39 Technicians</div></div>
-        <div class="job-card"><b>Hyderabad</b><div class="muted">32 Technicians</div></div>
-        <div class="job-card"><b>Delhi</b><div class="muted">46 Technicians</div></div>
+    <section style="margin-top:18px">
+      <h3>Branch Network</h3>
+      <div class="grid" style="margin-top:12px">
+        <div class="card-mini"><b>Bengaluru</b><div class="muted">41 techs</div></div>
+        <div class="card-mini"><b>Mumbai</b><div class="muted">39 techs</div></div>
+        <div class="card-mini"><b>Hyderabad</b><div class="muted">32 techs</div></div>
+        <div class="card-mini"><b>Delhi</b><div class="muted">46 techs</div></div>
       </div>
-      <div class="muted" style="margin-top:12px">Don't see your area? <a href="#contact" class="link">Request service</a></div>
     </section>
 
-    <footer>
-      <div>© FutriFix 2025 • Built for Indian neighborhoods</div>
-      <div class="muted">Made with ❤️ — FutriFix</div>
-    </footer>
-  </div>
+  </main>
 
-  <!-- Minimal JS: mock data + theme switching -->
-  <script>
-    /* ---------- theme switching ---------- */
-    document.querySelectorAll('.theme-btn').forEach(btn=>{
-      btn.addEventListener('click', () => {
-        const theme = btn.getAttribute('data-theme') || 'dark';
-        document.body.setAttribute('data-theme', theme);
+  <footer class="footer">
+    <div>© FutriFix 2025</div>
+    <div class="muted">Built for Indian neighborhoods</div>
+  </footer>
 
-        // visual press feedback: add transient class
-        btn.classList.add('pressed');
-        setTimeout(()=> btn.classList.remove('pressed'), 220);
-      });
-    });
-
-    /* ---------- mock rendering (kept small) ---------- */
-    const technicians = [
-      {id:1, name:'Rohit Sharma', initials:'RS', skill:'EV Scooter Expert', exp:'5 yrs', rating:4.9, price:199, phone:'912345678901'},
-      {id:2, name:'Imran Khan', initials:'IK', skill:'Solar / Battery', exp:'6 yrs', rating:4.8, price:249, phone:'919876543210'},
-      {id:3, name:'Rahul Verma', initials:'RV', skill:'AC Specialist', exp:'8 yrs', rating:5.0, price:299, phone:'919998887776'}
-    ];
-    const jobs = [
-      {id:101, title:'EV Scooter not charging', customer:'Asha R.', location:'PIN 560076', range:'₹350–500', bidders:[
-        {tech:'Rohit Sharma', price:430},{tech:'Imran Khan', price:420}
-      ]},
-      {id:102, title:'AC not cooling', customer:'Vikram S.', location:'PIN 400001', range:'₹600–900', bidders:[
-        {tech:'Rahul Verma', price:700}
-      ]}
-    ];
-
-    function renderTechs() {
-      const list = document.getElementById('techList');
-      list.innerHTML = '';
-      technicians.forEach(t => {
-        const el = document.createElement('div');
-        el.className = 'tech-card';
-        el.innerHTML = `
-          <div class="avatar">${t.initials}</div>
-          <div class="tech-main">
-            <b>${t.name}</b>
-            <div class="tech-sub">${t.skill} • <span class="muted">${t.exp}</span></div>
-            <div class="tech-meta">
-              <div class="chip">Base ₹${t.price}</div>
-              <div class="chip">${t.skill.split('/')[0].trim()}</div>
-            </div>
-          </div>
-          <div class="tech-actions">
-            <div class="rating">${t.rating}</div>
-            <a class="whatsapp-link" href="https://wa.me/${t.phone}" target="_blank" rel="noopener">
-              <button class="whatsapp-btn">WhatsApp</button>
-            </a>
-          </div>
-        `;
-        list.appendChild(el);
-      });
-    }
-
-    function renderJobs() {
-      const list = document.getElementById('jobList');
-      list.innerHTML = '';
-      jobs.forEach(job => {
-        const j = document.createElement('div');
-        j.className = 'job-card';
-        j.innerHTML = `
-          <div class="job-top">
-            <div style="flex:1">
-              <div class="job-title"><b>${job.title}</b></div>
-              <div class="job-meta">
-                <span class="muted">${job.customer}</span>
-                <span class="muted">•</span>
-                <span class="muted">${job.location}</span>
-              </div>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
-              <div class="price-tag">${job.range}</div>
-              <button class="bid-btn">${job.bidders.length} Bids</button>
-            </div>
-          </div>
-        `;
-        list.appendChild(j);
-      });
-    }
-
-    renderTechs();
-    renderJobs();
-  </script>
+  <script>document.addEventListener('DOMContentLoaded', ()=>{ FUTR.initIndex?.(); });</script>
 </body>
 </html>
